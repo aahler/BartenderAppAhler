@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahlea\\source\\repos\\BartenderApplication\\BartenderApplication.csproj": {}
+    "C:\\Users\\ahlea\\Source\\Repos\\aahler\\BartenderAppAhler\\BartenderApplication\\BartenderApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahlea\\source\\repos\\BartenderApplication\\BartenderApplication.csproj": {
+    "C:\\Users\\ahlea\\Source\\Repos\\aahler\\BartenderAppAhler\\BartenderApplication\\BartenderApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahlea\\source\\repos\\BartenderApplication\\BartenderApplication.csproj",
+        "projectUniqueName": "C:\\Users\\ahlea\\Source\\Repos\\aahler\\BartenderAppAhler\\BartenderApplication\\BartenderApplication.csproj",
         "projectName": "BartenderApplication",
-        "projectPath": "C:\\Users\\ahlea\\source\\repos\\BartenderApplication\\BartenderApplication.csproj",
+        "projectPath": "C:\\Users\\ahlea\\Source\\Repos\\aahler\\BartenderAppAhler\\BartenderApplication\\BartenderApplication.csproj",
         "packagesPath": "C:\\Users\\ahlea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahlea\\source\\repos\\BartenderApplication\\obj\\",
+        "outputPath": "C:\\Users\\ahlea\\Source\\Repos\\aahler\\BartenderAppAhler\\BartenderApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

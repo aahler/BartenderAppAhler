@@ -34,16 +34,7 @@
         <td>@item.Product.Price</td>
         <td>@item.Quantity</td>
         <td>@(item.Product.Price * item.Quantity)</td>
-        <td align="center">
-            @*<a asp-controller="order" asp-action="create" asp-route-id="@item.Product.Id">Buy Now</a>*@
-            <form asp-controller="Orders" asp-action="Create" method="post">
-                <a asp-for="Name">@item.Product.Name</a>
-                <a asp-for="Price">@item.Product.Price</a>
-                <a asp-for="Photo">@item.Product.Photo</a>
-                <a asp-for= "ProductID" > @item.Product.Product.Id</a>
-            <input type="submit" value="Create" class="btn btn-primary" />
-            </form>
-        </td>
+        
     </tr>
         }
         <tr>
