@@ -1,4 +1,5 @@
-﻿
+﻿@model BartenderApplication.Models.Order
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -13,23 +14,31 @@
 <body>
 
     <h3>Products List</h3>
-    <table cellpadding="2" cellspacing="2" border="1">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Photo</th>
-            <th>Price</th>
-            <th>Buy</th>
-        </tr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="row"></th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Buy</th>
+            </tr>
+        </thead>
         @foreach (var product in ViewBag.products)
         {
+
             <tr>
-                <td>@product.Id</td>
-                <td>@product.Name</td>
+                <th scope="row"></th>
                 <td><img src="~/images/@product.Photo" width="60" /> </td>
+                <td>@product.Name</td>
                 <td>@product.Price</td>
                 <td align="center">
-                    <a asp-controller="cart" asp-action="buy" asp-route-id="@product.Id">Buy Now</a>
+                    <form asp-controller="Orders" asp-action="Create" method="post">
+                        <input asp-for="Name" value="@product.Name" hidden />
+                        <input asp-for="Price" value="@product.Price" hidden />
+                        <input asp-for="ProductID" value="@product.ProductID" hidden />
+                        <input type="submit" value="Purchase" class="btn btn-primary" />
+                    </form>
                 </td>
             </tr>
         }
