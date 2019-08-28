@@ -14,21 +14,21 @@ namespace BartenderApplication.Models
         {
             this.products = new List<Product>() {
                 new Product {
-                    Id = "p01",
+                    Id = "1",
                     Name = "Jack and Coke",
-                    Price = 5,
+                    Price = 5.25,
                     Photo = "Jack_n_Coke.jpg"
                 },
                 new Product {
-                    Id = "p02",
+                    Id = "2",
                     Name = "Long Island",
-                    Price = 2,
+                    Price = 12.55,
                     Photo = "Long_Island.jpg"
                 },
                 new Product {
-                    Id = "p03",
+                    Id = "3",
                     Name = "Margarita",
-                    Price = 6,
+                    Price = 6.75,
                     Photo = "Margarita.jpg"
                 }
             };

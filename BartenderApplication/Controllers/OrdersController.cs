@@ -53,7 +53,7 @@ namespace BartenderApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Price,Photo,ProductID")] Order order)
+        public async Task<IActionResult> Create([Bind("ID,Name,Price,ProductID")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace BartenderApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ID,Name,Price,Photo,ProductID")] Order order)
+        public async Task<IActionResult> Edit(string id, [Bind("ID,Name,Price,ProductID")] Order order)
         {
             if (id != order.ID)
             {
