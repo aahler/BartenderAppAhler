@@ -1,7 +1,9 @@
-﻿
+﻿@model BartenderApplication.Models.Order
+
+
 @{
     ViewData["Title"] = "Index";
-   
+
 }
 
 <!DOCTYPE html>
@@ -26,16 +28,29 @@
         </tr>
         @foreach (var item in ViewBag.cart)
         {
-    <tr>
-        <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.Id">Remove</a></td>
-        <td>@item.Product.Id</td>
-        <td>@item.Product.Name</td>
-        <td><img src="~/images/@item.Product.Photo" width="60" /> </td>
-        <td>@item.Product.Price</td>
-        <td>@item.Quantity</td>
-        <td>@(item.Product.Price * item.Quantity)</td>
-        
-    </tr>
+            <tr>
+                <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.Id">Remove</a></td>
+                 <td>@item.Product.Id</td>
+                <td>@item.Product.Name</td>
+                <td><img src="~/images/@item.Product.Photo" width="60" /> </td>
+                <td>@item.Product.Price</td>
+                <td>@item.Quantity</td>
+                <td>@(item.Product.Price * item.Quantity)</td>
+                <td align="center">
+                    @*<a asp-controller="order" asp-action="create" asp-route-id="@item.Product.Id">Buy Now</a>*@
+                    <form asp-controller="Orders" asp-action="Create" method="post">
+                        <input asp-for="Name" value="@item.Product.Name" hidden/>
+                        <input asp-for="Price" value="@item.Product.Price" hidden/>
+                        <input asp-for="ProductID" value="@item.Product.ProductID" hidden/>
+                        @*<input asp-for="@Order.Name" />
+                        <input asp-for="@Model.Order.Price" />
+                        <input asp-for="@Model.Order.Photo" />
+                        <input asp-for="@Model.Order.ProductID" />*@
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </form>
+                    
+                </td>
+            </tr>
         }
         <tr>
             <td align="right" colspan="6">Sum</td>
@@ -44,7 +59,7 @@
             </td>
         </tr>
     </table>
-    
+
     <br>
 
     <a asp-controller="product" asp-action="index">Continue Shopping</a>
