@@ -24,6 +24,11 @@ namespace BartenderApplication.Controllers
             return View(await _context.Order.ToListAsync());
         }
 
+        public IActionResult Thanks()
+        {
+            return View();
+        }
+
         // GET: Orders/Details/5
         public async Task<IActionResult> Details(string id)
         {
@@ -59,7 +64,7 @@ namespace BartenderApplication.Controllers
             {
                 _context.Add(order);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Thanks));
             }
             return View(order);
         }

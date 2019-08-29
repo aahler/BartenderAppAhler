@@ -74,3 +74,4 @@ C:\Users\ahlea\Source\Repos\aahler\BartenderAppAhler\BartenderApplication\bin\De
 C:\Users\ahlea\Source\Repos\aahler\BartenderAppAhler\BartenderApplication\bin\Debug\netcoreapp2.2\BartenderApplication.Views.pdb
 C:\Users\ahlea\Source\Repos\aahler\BartenderAppAhler\BartenderApplication\obj\Debug\netcoreapp2.2\BartenderApplication.Views.pdb
 C:\Users\ahlea\Source\Repos\aahler\BartenderAppAhler\BartenderApplication\obj\Debug\netcoreapp2.2\BartenderApplication.csproj.CopyComplete
+C:\Users\ahlea\Source\Repos\aahler\BartenderAppAhler\BartenderApplication\obj\Debug\netcoreapp2.2\Razor\Views\Orders\Thanks.g.cshtml.cs
